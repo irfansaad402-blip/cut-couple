@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ek aur bar soch lo</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: #343a40;
+    }
+
+    .container {
+      text-align: center;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+      max-width: 90%;
+      width: 400px;
+      animation: fadeIn 0.8s ease;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+
+    .btn-custom {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      width: 48%;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .yes-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .yes-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .no-btn {
+      background-color: pink;
+      color: #333;
+    }
+
+    .no-btn:hover {
+      background-color: #ff9eb3;
+    }
+
+    @media (max-width: 768px) {
+      .btn-custom {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 1rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="1.jpg" alt="Gift" class="img-fluid">
+    <h2>Ek aur bar soch lo 💭</h2>
+    <p>Kyun aisa kar rahy ho? Please maan jao 💖</p>
+
+    <button class="btn btn-custom yes-btn" onclick="goToFifthPage()">Yes</button>
+    <button class="btn btn-custom no-btn" onclick="goToFourthPage()">No</button>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function goToFifthPage() {
+      window.location.href = "index5.html";
+    }
+
+    function goToFourthPage() {
+      window.location.href = "index4.html";
+    }
+  </script>
+
+</body>
+</html>

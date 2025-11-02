@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: #343a40;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+      max-width: 90%;
+      width: 400px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+
+    .btn-custom {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      width: 48%;
+      transition: background-color 0.3s ease;
+      position: relative;
+    }
+
+    .btn-primary {
+      background-color: pink;
+      border: none;
+      color: black;
+    }
+
+    .btn-primary:hover {
+      background-color: #ffb6c1;
+    }
+
+    .btn-danger {
+      position: absolute;
+      transition: all 0.3s ease;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .btn-custom {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/1.jpg" alt="Gift" class="img-fluid" />
+    <div>
+      <p>Baby mat jao na 💔</p>
+      <p>Kitna bhav khaogi 😢</p>
+      <p>I really love you ❤️</p>
+    </div>
+    <button class="btn btn-primary btn-custom" onclick="goToFifthPage()">Yes</button>
+    <button
+      class="btn btn-danger btn-custom"
+      id="noBtn"
+      onmouseover="moveButton()"
+      onclick="moveButton()"
+    >
+      No
+    </button>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    // Button move function
+    function moveButton() {
+      var noBtn = document.getElementById("noBtn");
+      var container = document.querySelector(".container");
+
+      var containerRect = container.getBoundingClientRect();
+
+      // Random position within container
+      var randomTop = Math.floor(Math.random() * (containerRect.height - 50));
+      var randomLeft = Math.floor(Math.random() * (containerRect.width - 80));
+
+      noBtn.style.position = "absolute";
+      noBtn.style.top = randomTop + "px";
+      noBtn.style.left = randomLeft + "px";
+    }
+
+    // Redirect if "Yes" clicked
+    function goToFifthPage() {
+      window.location.href = "index5.html";
+    }
+  </script>
+</body>
+</html>
